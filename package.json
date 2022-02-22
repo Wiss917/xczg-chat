@@ -1,0 +1,23 @@
+{
+  "name": "xczg-chat-sdk",
+  "version": "1.0.0",
+  "description": "即时通讯与音视频sdk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "keywords": [
+    "im",
+    "audio",
+    "video"
+  ],
+  "author": "wisszeix",
+  "license": "ISC",
+  "dependencies": {
+    "easemob-websdk": "^4.0.3"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  }
+}
