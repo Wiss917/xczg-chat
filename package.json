@@ -15,6 +15,7 @@
   "author": "wisszeix",
   "license": "ISC",
   "dependencies": {
+    "easemob-webrtc": "^3.4.1",
     "easemob-websdk": "^4.0.3"
   },
   "devDependencies": {

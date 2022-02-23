@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+easemob-webrtc@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.npmmirror.com/easemob-webrtc/-/easemob-webrtc-3.4.1.tgz#c9fe4be652d7a5bbe1b53237073b20e1cc492687"
+  integrity sha512-LmGY2RAgxjXjRrz9gNLAkiz0seovUpxcLMhXabx+nb4bfpgp2ArA8ToB6YKeFvGmXXqINHyQatj91aZBfk9sHA==
+
 easemob-websdk@^4.0.3:
   version "4.0.3"
   resolved "https://registry.npmmirror.com/easemob-websdk/-/easemob-websdk-4.0.3.tgz#b8dfede7664b7bc0662c80514587d95b6693ec13"
