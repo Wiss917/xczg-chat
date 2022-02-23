@@ -1,1 +1,1 @@
-export { getWebIMInstance } from './src/IM';
+export { getWebIMInstance } from './src';

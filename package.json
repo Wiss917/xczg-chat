@@ -2,7 +2,8 @@
   "name": "xczg-chat-sdk",
   "version": "1.0.1",
   "description": "即时通讯与音视频sdk",
-  "main": "index.js",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",

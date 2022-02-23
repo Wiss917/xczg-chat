@@ -1,7 +1,7 @@
 import websdk, { EasemobChat } from 'easemob-websdk';
-import { IIMWebConfig } from '../interface/im';
-import { getConfig, getConnOpts } from './config';
-import { WebIM } from './WebIM';
+import { IIMWebConfig } from './interface/im';
+import { getConfig, getConnOpts } from './IM/config';
+import { WebIM } from './IM/WebIM';
 
 export const getWebIMInstance = (initOpts: {
   customConfig: IIMWebConfig;
