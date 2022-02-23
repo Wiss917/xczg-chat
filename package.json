@@ -1,11 +1,13 @@
 {
   "name": "xczg-chat-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "即时通讯与音视频sdk",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "tsc",
+    "lint": "eslint --ext .ts .",
+    "lint:fix": "eslint --fix --ext .ts ."
   },
   "keywords": [
     "im",
@@ -19,6 +21,13 @@
     "easemob-websdk": "^4.0.3"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.1",
+    "@typescript-eslint/parser": "^5.12.1",
+    "eslint": "^8.9.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript-base": "^3.0.1",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-import": "^2.25.4",
     "typescript": "^4.5.5"
   }
 }

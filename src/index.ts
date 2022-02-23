@@ -1,1 +1,0 @@
-export { getWebIMInstance } from './IM';

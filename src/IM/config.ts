@@ -15,7 +15,7 @@ export function getConfig(customConfig?: Partial<IIMWebConfig>): IIMWebConfig {
 }
 
 export function getConnOpts(
-  customOpts?: Partial<EasemobChat.ConnectionParameters>
+  customOpts?: Partial<EasemobChat.ConnectionParameters>,
 ) {
   return {
     ...defaultConnectionOpts,

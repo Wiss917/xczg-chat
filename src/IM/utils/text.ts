@@ -1,4 +1,5 @@
 import { EasemobChat } from 'easemob-websdk';
+
 export const success = (res: EasemobChat.SendMsgResult) => {
   console.log(res);
 };

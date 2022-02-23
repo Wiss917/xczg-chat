@@ -1,10 +1,5 @@
 import { EasemobChat, EasemobChatStatic } from 'easemob-websdk';
 
-export interface IWebIM extends EasemobChatStatic {
-  config: IIMWebConfig;
-  conn: EasemobChat.Connection
-}
-
 /**
  * @description im通信配置
  */
@@ -43,6 +38,11 @@ export interface IIMWebConfig {
   useOwnUploadFun: boolean; // 是否使用自己的上传方式（如将图片文件等上传到自己的服务器，构建消息时只传url）
 
   deviceId: string; // 设备ID，默认可不传，如果传一个固定值，在没开启多端登录的情况下同一个账号会互踢
+}
+
+export interface IWebIM extends EasemobChatStatic {
+  config: IIMWebConfig;
+  conn: EasemobChat.Connection;
 }
 
 export interface IRegisterOpt {

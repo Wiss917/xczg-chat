@@ -8,8 +8,11 @@ import { fail, success } from './utils/text';
 
 export class WebIM {
   imsdk: EasemobChatStatic;
+
   conn: EasemobChat.Connection;
+
   config: IIMWebConfig;
+
   constructor(
     imsdk: EasemobChatStatic,
     config: {
@@ -22,30 +25,31 @@ export class WebIM {
     this.conn = new imsdk.connection(config.connOpts);
   }
 
-  //#region 注册登录登出
+  // #region 注册登录登出
   /**
    *
    * @description 注册通信账号
    * @param opts 注册选项
    * @returns 已注册用户基本信息
    */
-  register = async (opts: IRegisterOpt) => await register.bind(this)(opts);
+  register = async (opts: IRegisterOpt) => register.bind(this)(opts);
+
   /**
    *
    * @description 可以通过token或者pwd方式登录
    * @param opts 登录选项
    * @returns token，过期时间，有效时长
    */
-  login = async (opts: ILoginOpt) => await login.bind(this)(opts);
+  login = async (opts: ILoginOpt) => login.bind(this)(opts);
 
   /**
    * @description 登出
    */
   logout = () => this.conn.close();
 
-  //#endregion
+  // #endregion
 
-  //#region 事件监听
+  // #region 事件监听
   /**
    *
    * @todo 考虑对注册事件的管理
@@ -62,9 +66,9 @@ export class WebIM {
    * @param id 事件id
    */
   removeEventHandler = (id: string): void => this.conn.removeEventHandler(id);
-  //#endregion
+  // #endregion
 
-  //#region 消息收发
+  // #region 消息收发
   /**
    *
    * @param text 文本消息
@@ -79,7 +83,7 @@ export class WebIM {
       conn,
     } = this;
 
-    return await conn.send({
+    return conn.send({
       id: utils.getUniqueId(),
       msg: text,
       type: 'txt',
@@ -122,7 +126,7 @@ export class WebIM {
       throw new Error('没有获取到图片资源！');
     }
 
-    return await conn.send({
+    return conn.send({
       id: utils.getUniqueId(),
       type: 'img',
       time: new Date().getTime(),
@@ -133,5 +137,5 @@ export class WebIM {
       ...(hooks || {}),
     });
   }
-  //#endregion
+  // #endregion
 }

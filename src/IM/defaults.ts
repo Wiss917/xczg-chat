@@ -2,7 +2,7 @@ import { EasemobChat } from 'easemob-websdk';
 import { IIMWebConfig } from '../interface/im';
 
 export const registerHandleError = (err: EasemobChat.ErrorEvent) => {
-  let errorData = JSON.parse(err.data);
+  const errorData = JSON.parse(err.data);
   if (errorData.error === 'duplicate_unique_property_exists') {
     console.log('用户已存在！');
   } else if (errorData.error === 'illegal_argument') {
@@ -55,4 +55,4 @@ export const defaultConnectionOpts: EasemobChat.ConnectionParameters = {
   isHttpDNS: defaultIMWebConfig.isHttpDNS,
 };
 
-export const chatType = 'singleChat'
+export const chatType = 'singleChat';

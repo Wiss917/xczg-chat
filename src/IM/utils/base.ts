@@ -1,5 +1,5 @@
 import { EasemobChat } from 'easemob-websdk';
-import { WebIM } from '..';
+import { WebIM } from '../WebIM';
 import { ILoginOpt, IRegisterOpt } from '../../interface/im';
 
 export async function register(
@@ -7,7 +7,7 @@ export async function register(
   opts: IRegisterOpt
 ): Promise<EasemobChat.RegisterUserResult> {
   const { conn } = this;
-  return await conn.registerUser(opts);
+  return conn.registerUser(opts);
 }
 
 export async function login(
@@ -21,5 +21,5 @@ export async function login(
   }
 
   const { conn } = this;
-  return await conn.open(opt);
+  return conn.open(opt);
 }
